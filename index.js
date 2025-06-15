@@ -8,8 +8,8 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,"view","index.html"))
 })
-app.get('/sobre', (req, res) => {
-    res.sendFile(path.join(__dirname,"view","sobre.html"))
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname,"view","about.html"))
 })
 
 app.listen(port, () => {

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "buildCss": "npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css --watch",
-    "dev": "concurrently \"npm start\" \"npm run buildCss\""
+    "dev": "concurrently \"npm run buildCss\" \"npm run start\""
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
     "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "daisyui": "^5.0.43"
   }
 }
