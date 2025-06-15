@@ -14,10 +14,12 @@
     "@tailwindcss/cli": "^4.1.10",
     "concurrently": "^9.1.2",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10",
-    "tailwindcss": "^4.1.10"
+    "nodemon": "^3.1.10"
   },
   "devDependencies": {
-    "daisyui": "^5.0.43"
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.43",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10"
   }
 }
