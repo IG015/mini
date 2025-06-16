@@ -1,26 +1,29 @@
-let isLoading = false;
+let isLoading = false
+let changeImageTimeout;
+let lastClassFormat = 'circle'
+let isFirstLoad = true
 
 const loadImage = async () => {
     if (isLoading) return;
-    isLoading = true;
+    isLoading = true
 
     try {
-
         const el = document.querySelector('#dogEl')
-
         const img = await getAnImage()
-        console.log(await img)
-        el.src = `${img}`
 
-        if (el.classList.contains('blur'))
+        el.src = img
+
+        if (el.classList.contains('blur')) {
             el.classList.remove('blur')
+        }
+
+        updateImageFormat()
 
     } catch (err) {
         console.error({ err })
-    }finally{
-        isLoading = true;
+    } finally {
+        isLoading = false
     }
-
 }
 
 const getAnImage = async () => {
